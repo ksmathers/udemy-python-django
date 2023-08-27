@@ -1,7 +1,8 @@
-#from django.test import TestCase
+# from django.test import TestCase
 from django.test import SimpleTestCase as TestCase
 
 from app.util import Calc
+
 
 class ViewsTests(TestCase):
     def test_sum(self):
@@ -19,7 +20,3 @@ class ViewsTests(TestCase):
         self.assertEqual(c.accum(), 12)
         c.clear()
         self.assertEqual(c.accum(), 0)
-
-        
-
-        

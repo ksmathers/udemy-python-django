@@ -2,6 +2,7 @@ from django.test import SimpleTestCase as TestCase
 
 from app.iso_datetime import IsoDateTime
 
+
 class TestIsoDateTime(TestCase):
     def test_to_local(self):
         tz = "America/Los_Angeles"
@@ -34,6 +35,3 @@ class TestIsoDateTime(TestCase):
 
         dtz = IsoDateTime("1965-06-30T12:00:00Z")
         self.assertEqual(dtz.localize(tz), "1965-06-30T05:00:00PDT")
-
-
-
