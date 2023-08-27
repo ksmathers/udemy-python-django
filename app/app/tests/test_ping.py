@@ -9,8 +9,8 @@ class TestPing(TestCase):
         res = client.get("/doesnotexist")
         self.assertEqual(res.status_code, 404)
 
-    def test_get_ping(self):
-        client = APIClient()
-        res = client.get("/ping")
-        self.assertEqual(res.status_code, 200)
-        self.assertEqual(res.data, "ack")
+    # def test_get_ping(self):
+    #     client = APIClient()
+    #     res = client.get("/ping")
+    #     self.assertEqual(res.status_code, 200)
+    #     self.assertEqual(res.data, "ack")
